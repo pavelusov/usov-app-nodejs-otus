@@ -1,10 +1,10 @@
 # Course of Nodejs from Otus.ru. The "My courses" application
 
-###Dockerfile run
+### Dockerfile run
 
-##Development mode
+## Development mode
 
-####Build a front-end and a back-end images
+#### Build a front-end and a back-end images
 
 Build image of development 
 
@@ -12,7 +12,7 @@ Build image of development
 docker-compose -f ./config/docker-compose-dev.yml build
 ```
 
-####Run
+#### Run
 
 Run the images for development 
 
@@ -28,9 +28,9 @@ The front-end server on http://localhost:5100/
 The back-end server on http://localhost:5000/
 
 
-##Production mode
+## Production mode
 
-####Build a front-end and a back-end images
+#### Build a front-end and a back-end images
 
 Build image of production 
 
@@ -38,7 +38,7 @@ Build image of production
 docker-compose -f ./config/docker-compose.yml build
 ```
 
-####Run
+#### Run
 
 Run the images for production 
 
@@ -52,4 +52,3 @@ docker-compose -f ./config/docker-compose.yml up -d
 
 The front-end server on http://localhost:80/
 The back-end server on http://localhost:5000/
-
