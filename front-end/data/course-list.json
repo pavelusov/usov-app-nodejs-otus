@@ -4,13 +4,59 @@
     "title": "Node.js basics",
     "description": "Course of Node.js",
     "image": "https://itvdn.blob.core.windows.net/catalog-images/node_js-img.jpg",
-    "link": "1"
+    "link": "1",
+    "classrooms": [
+      {
+        "id": "1",
+        "title": "First class",
+        "description": "We going to study...",
+        "date": "01.01.2021",
+        "link": null
+      },
+      {
+        "id": "2",
+        "title": "Second class",
+        "description": "We going to study...",
+        "date": "01.01.2021",
+        "link": null
+      },
+      {
+        "id": "3",
+        "title": "Third class",
+        "description": "We going to study...",
+        "date": "01.01.2021",
+        "link": null
+      }
+    ]
   },
   {
     "id": "2",
     "title": "MongoDB basics",
     "description": "Course of MongoDB",
     "image": "https://itvdn.blob.core.windows.net/catalog-images/mongodb-img.jpg",
-    "link": "2"
+    "link": "2",
+    "classrooms": [
+      {
+        "id": "1",
+        "title": "First class",
+        "description": "We going to study...",
+        "date": "01.01.2021",
+        "link": null
+      },
+      {
+        "id": "2",
+        "title": "Second class",
+        "description": "We going to study...",
+        "date": "01.01.2021",
+        "link": null
+      },
+      {
+        "id": "3",
+        "title": "Third class",
+        "description": "We going to study...",
+        "date": "01.01.2021",
+        "link": null
+      }
+    ]
   }
 ]
