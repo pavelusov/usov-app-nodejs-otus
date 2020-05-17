@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "title": "Node.js basics",
+    "description": "Course of Node.js",
+    "image": "https://itvdn.blob.core.windows.net/catalog-images/node_js-img.jpg",
+    "link": "1"
+  },
+  {
+    "id": "2",
+    "title": "MongoDB basics",
+    "description": "Course of MongoDB",
+    "image": "https://itvdn.blob.core.windows.net/catalog-images/mongodb-img.jpg",
+    "link": "2"
+  }
+]

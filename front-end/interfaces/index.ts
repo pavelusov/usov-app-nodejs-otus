@@ -8,3 +8,11 @@ export type User = {
   id: number
   name: string
 }
+
+export interface ICourse {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
