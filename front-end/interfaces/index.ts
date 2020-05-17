@@ -3,12 +3,21 @@ export type User = {
   name: string
 }
 
+export interface ILink {
+  id: string;
+  type: string;
+  title: string;
+  link: string;
+}
+
 export interface IClassRoom {
   id: string;
+  courseId: string;
   title: string;
   description: string;
   date: string;
-  link: string | null;
+  link?: string | null;
+  links: ILink[];
 }
 
 export interface ICourse {
@@ -18,4 +27,10 @@ export interface ICourse {
   image: string;
   link: string;
   classrooms: IClassRoom[];
+}
+
+export interface ILink {
+  id: string;
+  title: string;
+  link: string;
 }

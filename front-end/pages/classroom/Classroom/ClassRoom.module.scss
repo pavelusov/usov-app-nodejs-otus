@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 20px;
+}
+
+.date {
+  color: gray;
+}
+
+.description {
+  margin-bottom: 30px;
+}
+
+.media {
+
+}
+
+.mediaTabs {
+  width: 30%;
+}
+
+.mediaTab {
+  padding: 10px;
+  border: 1px solid lightgray;
+}
+
+.mediaTabContent {
+  border: 1px solid lightgray;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

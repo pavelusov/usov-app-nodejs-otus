@@ -1,8 +1,10 @@
 import React from 'react';
-import { Container, ListGroup, ListGroupItem } from 'react-bootstrap';
+import Link from 'next/link';
+import { Button, Container, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 import { ICourse } from '../../../interfaces';
 import s from './Course.module.scss';
+
 
 const Course = ({ title, description, image, classrooms }: ICourse) => (
   <Container>
@@ -12,14 +14,22 @@ const Course = ({ title, description, image, classrooms }: ICourse) => (
       <div className={s.description}>{description}</div>
     </div>
     <ListGroup>
-      {classrooms.map(({ id, title, description, date }) => (
+      {classrooms.map(({ id, title, description, date, link }) => (
         <ListGroupItem key={id}>
           <div className={s.classRoomTitle}>{title}</div>
           <div className={s.classRoomDescription}>{description}</div>
           <div className={s.classRoomDate}>{date}</div>
+          {link && (
+            <Link href={link}>
+              <Button variant="secondary">Go to the classroom</Button>
+            </Link>
+          )}
         </ListGroupItem>
       ))}
     </ListGroup>
+    <div className={s.adminPart}>
+      <Button variant="success">Add user</Button>
+    </div>
   </Container>
 );
 
