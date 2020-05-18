@@ -1,0 +1,78 @@
+[
+  {
+    "id": "1",
+    "courseId": "1",
+    "title": "First class",
+    "description": "We going to study...",
+    "date": "01.01.2021",
+    "links": [
+      {
+        "id": "1",
+        "type": "video",
+        "link": "JcmenBSMOho",
+        "title": "The video of the classroom"
+      },
+      {
+        "id": "2",
+        "type": "link",
+        "link": "https://github.com/ydvorzhetskiy/node-08",
+        "title": "The link of a resource"
+      },
+      {
+        "id": "3",
+        "type": "video",
+        "link": "mTueMlSvQmc",
+        "title": "The second video of the classroom"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "courseId": "1",
+    "title": "Second class",
+    "description": "We going to study...",
+    "date": "02.01.2021",
+    "links": [
+      {
+        "id": "1",
+        "type": "video",
+        "link": "JcmenBSMOho",
+        "title": "The video of the classroom"
+      },
+      {
+        "id": "2",
+        "type": "video",
+        "link": "mTueMlSvQmc",
+        "title": "The second video of the classroom"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "courseId": "1",
+    "title": "Third class",
+    "description": "We going to study...",
+    "date": "03.01.2021",
+    "links": [
+      {
+        "id": "1",
+        "type": "video",
+        "link": "JcmenBSMOho",
+        "title": "The video of the classroom"
+      },
+      {
+        "id": "2",
+        "type": "video",
+        "link": "mTueMlSvQmc",
+        "title": "The second video of the classroom"
+      },
+      {
+        "id": "3",
+        "type": "link",
+        "link": "https://github.com/ydvorzhetskiy/node-08",
+        "title": "The link of a resource"
+      }
+    ]
+  }
+]
+

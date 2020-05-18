@@ -1,0 +1,42 @@
+.title {
+  margin-bottom: 30px;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.image {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 30px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.description {
+  font-size: 16px;
+  padding: 0 30px;
+}
+
+.classRoomTitle {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.classRoomDescription {
+  font-size: 16px;
+}
+
+.classRoomDate {
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.adminPart {
+  margin: 30px 0;
+}

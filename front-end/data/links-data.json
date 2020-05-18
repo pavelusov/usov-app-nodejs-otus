@@ -1,0 +1,14 @@
+[
+  {
+    "link": "/",
+    "title": "Courses"
+  },
+  {
+    "link": "/login",
+    "title": "Log in"
+  },
+  {
+    "link": "/signup",
+    "title": "Sign Up"
+  }
+]

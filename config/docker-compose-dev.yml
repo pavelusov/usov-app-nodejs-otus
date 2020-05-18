@@ -1,0 +1,21 @@
+---
+version: "3.5"
+services:
+
+  back-end:
+    restart: "on-failure"
+    build:
+      context: ./../back-end
+      dockerfile: ./../config/Dockerfile-backend
+    environment:
+      DEBUG : "back-end:*"
+    ports:
+      - "5000:5000"
+
+  front-end:
+    restart: "on-failure"
+    build:
+      context: ./../front-end
+      dockerfile: ./../config/Dockerfile-frontend-dev
+    ports:
+      - "5100:3000"

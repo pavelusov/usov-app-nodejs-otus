@@ -1,0 +1,11 @@
+@import '~bootstrap/scss/bootstrap';
+@import './variables.scss';
+
+a {
+  color: $main-color;
+
+  &:hover {
+    color: $main-color-hover;
+    text-decoration: none;
+  }
+}
