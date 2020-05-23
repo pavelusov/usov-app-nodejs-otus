@@ -1,0 +1,58 @@
+Arguments: 
+  /usr/local/bin/node /Users/pavelusov/.yarn/bin/yarn.js run dev
+
+PATH: 
+  /Users/pavelusov/.yarn/bin:/Users/pavelusov/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  10.15.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/pavelusov/Projects/otus/usov-app-nodejs-otus/back-end/package.json: Unexpected token } in JSON at position 259
+      at JSON.parse (<anonymous>)
+      at /Users/pavelusov/.yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/Users/pavelusov/.yarn/lib/cli.js:304:30)
+      at /Users/pavelusov/.yarn/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "back-end",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+      "test": "jest --watchAll --runInBand --detectOpenHandles",
+      "dev": "MODE=development nodemon --watch ./routes --watch ./app.js --exec='node -r dotenv/config ./bin/www'",
+    },
+    "dependencies": {
+      "cookie-parser": "~1.4.4",
+      "debug": "~2.6.9",
+      "dotenv": "^8.2.0",
+      "express": "~4.16.1",
+      "express-validator": "^6.5.0",
+      "mongoose": "^5.9.14",
+      "morgan": "~1.9.1"
+    },
+    "devDependencies": {
+      "@babel/cli": "^7.8.4",
+      "@babel/core": "^7.9.6",
+      "@babel/plugin-transform-runtime": "^7.9.6",
+      "@babel/preset-env": "^7.9.6",
+      "@babel/register": "^7.9.0",
+      "@shelf/jest-mongodb": "^1.1.5",
+      "jest": "^26.0.1",
+      "nodemon": "^2.0.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
