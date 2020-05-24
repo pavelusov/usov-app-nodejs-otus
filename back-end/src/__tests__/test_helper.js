@@ -1,6 +1,6 @@
 const mg = require('mongoose');
 
-mg.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+mg.connect(process.env.MONGODB_TEST_URI, { useNewUrlParser: true });
 
 mg.connection
   .once('open', () => console.log('Mongo open'))
