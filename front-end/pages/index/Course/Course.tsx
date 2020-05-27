@@ -14,7 +14,7 @@ const Course = ({ title, description, image, classrooms }: ICourse) => (
       <div className={s.description}>{description}</div>
     </div>
     <ListGroup>
-      {classrooms.map(({ id, title, description, date, link }) => (
+      {Array.isArray(classrooms) && classrooms?.map(({ id, title, description, date, link }) => (
         <ListGroupItem key={id}>
           <div className={s.classRoomTitle}>{title}</div>
           <div className={s.classRoomDescription}>{description}</div>

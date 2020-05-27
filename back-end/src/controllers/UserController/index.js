@@ -1,7 +1,7 @@
 const { validationResult } = require('express-validator');
 
-const UserService = require('../../services/UserService');
 const ErrorService = require('../../services/ErrorService');
+const UserService = require('../../services/UserService');
 
 const service = new UserService();
 
@@ -42,7 +42,18 @@ class UserController {
       password: body.password,
     });
 
-    res.send(user)
+    res.send(user);
+  }
+
+  static async login(req, res) {
+    const { body } = req;
+
+    const data = await service.login({
+      login: body.login,
+      password: body.password,
+    });
+
+    res.send(data);
   }
 }
 

@@ -13,8 +13,9 @@ const Courses = ({ data }: Props) => (
   <Container>
     <h1 className={s.title}>Our course list</h1>
     <div>
-      {data.map(({ id, title, description, image, link }) => (
+      {Array.isArray(data) && data.map(({ id, title, description, image, link, classrooms }) => (
         <Course
+          classrooms={classrooms}
           key={id}
           id={id}
           title={title}

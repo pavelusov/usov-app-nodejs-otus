@@ -9,9 +9,9 @@ import AuthService from "../../services/AuthService";
 
 
 
-const SignUpPage = () => {
+const SignInPage = () => {
   const onSubmit = async (payload: {[key: string]: string}) => {
-    const res = await fetcher('api/user/signup', { body: payload });
+    const res = await fetcher('api/user/signin', { body: payload });
 
     if (res?.errors) {
       const errors: {[key: string]: string} = {};
@@ -21,12 +21,12 @@ const SignUpPage = () => {
       return errors;
     }
 
-    await Router.push('/');
+    await Router.push('/user');
   };
 
   return (
     <Layout>
-      <AuthForm buttonTitle="Sign up" title="User registration" onSubmit={onSubmit} />
+      <AuthForm buttonTitle="Sign in" title="Log in" onSubmit={onSubmit} />
     </Layout>
   )
 };
@@ -39,4 +39,4 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   }
 }
 
-export default SignUpPage;
+export default SignInPage;

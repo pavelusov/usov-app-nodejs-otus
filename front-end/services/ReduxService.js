@@ -1,0 +1,6 @@
+
+class ReduxService {
+  static wrapper() {
+
+  }
+}

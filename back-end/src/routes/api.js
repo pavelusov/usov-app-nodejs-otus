@@ -4,11 +4,16 @@ const { check } = require('express-validator');
 
 const router = express.Router();
 router
-  .get('/api/users', function(req, res, next) {
-    res.send('users');
-  })
+  .post('/api/user/signin',
+    [
+      check('login').isEmail(),
+      check('password').isLength({ min: 5 })
+    ],
+    UserController.validate,
+    UserController.login,
+    )
   .post(
-    '/api/users',
+    '/api/user/signup',
     [
       check('login').isEmail(),
       check('password').isLength({ min: 5 })

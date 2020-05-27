@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mg = require('mongoose');
 
 mg.connect(process.env.MONGODB_TEST_URI, { useNewUrlParser: true });
