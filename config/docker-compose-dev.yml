@@ -2,20 +2,47 @@
 version: "3.5"
 services:
 
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+    ports:
+      - '27017:27017'
+    networks:
+      - frontend
+
   back-end:
+    container_name: courses-back-end
     restart: "on-failure"
     build:
       context: ./../back-end
       dockerfile: ./../config/Dockerfile-backend
     environment:
-      DEBUG : "back-end:*"
+      DEBUG: "back-end:*"
+      NODE_ENV: development
+      MONGODB_DEV_URI: 'mongodb://mongo:27017/docker-node-mongo'
+      JWT_SECRET: 1234567890
     ports:
       - "5000:5000"
+    links:
+      - mongo
+    networks:
+      - frontend
 
   front-end:
+    container_name: courses-front-end
     restart: "on-failure"
     build:
       context: ./../front-end
       dockerfile: ./../config/Dockerfile-frontend-dev
     ports:
       - "5100:3000"
+    environment:
+      NODE_ENV: development
+      JWT_SECRET: 1234567890
+      API_HOST: 'http://courses-back-end:5000/api'
+    networks:
+      - frontend
+
+networks:
+  frontend:

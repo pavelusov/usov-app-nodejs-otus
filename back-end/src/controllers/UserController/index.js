@@ -47,7 +47,6 @@ class UserController {
 
   static async login(req, res) {
     const { body } = req;
-
     const data = await service.login({
       login: body.login,
       password: body.password,

@@ -10,6 +10,7 @@ const isDevMode = process.env.NODE_ENV === 'development';
 const mongoDBUri = isDevMode ? process.env.MONGODB_DEV_URI : process.env.MONGODB_URI;
 const indexRouter = require('./routes');
 const apiRouter = require('./routes/api');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -20,8 +21,8 @@ mg.connection
 
 app.use(cors());
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);

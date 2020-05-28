@@ -18,10 +18,11 @@ class UserService {
 
   async login(options) {
     const { login, password } = options;
-    const data = await User.findOne({ login }, { password });
-    const hasUser = await PasswordService.compare(password, data.password);
-
-    if (hasUser) return { data: { success: true }};
+    const data = await User.findOne({ login }, 'password');
+    if (data) {
+      const hasUser = await PasswordService.compare(password, data.password);
+      if (hasUser) return { data: { success: true }};
+    }
 
     const loginFieldError = new ErrorService({
       value: login,
