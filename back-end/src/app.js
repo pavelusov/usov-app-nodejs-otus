@@ -14,19 +14,27 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+process.on('unhandledRejection', (reason, p) => {
+  console.error('Unhandled Rejection at:', p, 'reason:', reason);
+  process.exit(1);
+});
+
 mg.connect(mongoDBUri, { useNewUrlParser: true });
 mg.connection
-  .once('open', () => console.info('***: Mongo open :***'))
+  .once('open', () => {
+    console.info('***: Mongo open :***');
+    app.use(cors());
+    app.use(logger('dev'));
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false }));
+    app.use(cookieParser());
+    app.use(express.static(path.join(__dirname, 'public')));
+    app.use('/', indexRouter);
+    app.use('/', apiRouter);
+  })
   .on('error', error => console.warn('Error', error));
 
-app.use(cors());
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/', indexRouter);
-app.use('/', apiRouter);
+
 
 
 module.exports = app;

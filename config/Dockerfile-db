@@ -1,8 +1,0 @@
-FROM mongo
-WORKDIR /app
-
-COPY ./ /app
-RUN yarn install
-
-EXPOSE 5000
-CMD ["node", "./bin/www"]
