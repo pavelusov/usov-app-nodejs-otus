@@ -8,14 +8,16 @@ import AppContext from '../../contexts/AppContext';
 type Props = {
   title?: string;
   access?: boolean;
+  apiHost?: string;
 }
 
 const Layout: React.FunctionComponent<Props> = ({
   children,
   title = 'This is the default title',
-  access = false
+  access = false,
+  apiHost = '',
 }) => (
-  <AppContext.Provider value={{ access }}>
+  <AppContext.Provider value={{ access, apiHost }}>
     <div className={s.root}>
       <Head>
         <title>{title}</title>

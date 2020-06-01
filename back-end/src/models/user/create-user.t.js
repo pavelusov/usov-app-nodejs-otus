@@ -15,7 +15,7 @@ describe('insert', () => {
     conn = mg.connection;
   });
 
-  beforeEach(async (next) => {
+  afterEach(async (next) => {
     await conn.collections.users.drop();
     next();
   });

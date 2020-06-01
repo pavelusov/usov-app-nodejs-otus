@@ -9,4 +9,7 @@ const UserSchema = new Schema({
 
 const User = mg.model('user', UserSchema);
 
-module.exports = User;
+module.exports = {
+  User,
+  UserSchema
+};

@@ -1,4 +1,4 @@
-const User = require('../models/user/User');
+const { User } = require('../models/user/User');
 const PasswordService = require('../services/PasswordService');
 const ErrorService = require('../services/ErrorService');
 
@@ -30,6 +30,7 @@ class UserService {
       param: 'login',
       location: 'body'
     });
+
     const passwordFieldError = new ErrorService({
       value: login,
       msg: 'The username or password is not correct',

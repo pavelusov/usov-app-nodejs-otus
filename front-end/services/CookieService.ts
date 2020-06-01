@@ -1,6 +1,8 @@
-import cookie from "cookie";
-import JWTService from "./JWTService";
-import { NextApiRequest, NextApiResponse } from "next";
+import cookie from 'cookie';
+import UniversalCookie from 'universal-cookie';
+
+import JWTService from './JWTService';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 class CookieService {
   static setAccessTokenCookie(req: NextApiRequest, res: NextApiResponse) {
@@ -19,6 +21,10 @@ class CookieService {
       maxAge: -1,
       path: '/',
     }));
+  }
+
+  static getBrowserCookie(name: string): string | undefined {
+    return new UniversalCookie().get(name);
   }
 }
 

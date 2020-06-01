@@ -11,6 +11,14 @@ class JWTService {
   static verify(token) {
     return jwt.verify(token, process.env.JWT_SECRET);
   }
+
+  static getTokenFromHeaders(headers) {
+    if (typeof headers.authorization !== 'undefined') {
+      const token = headers.authorization.split(' ')[1];
+      return token
+    }
+    return;
+  }
 }
 
 module.exports = JWTService;

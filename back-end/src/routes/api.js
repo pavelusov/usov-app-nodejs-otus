@@ -1,5 +1,6 @@
 const express = require('express');
 const UserController = require('../controllers/UserController');
+const CourseController = require('../controllers/CourseController');
 const { check } = require('express-validator');
 
 const router = express.Router();
@@ -21,6 +22,8 @@ router
     UserController.validate,
     UserController.userExist,
     UserController.create,
-  );
+  )
+  .get('/api/course', CourseController.fetch)
+  .post('/api/course', CourseController.create);
 
 module.exports = router;
