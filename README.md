@@ -25,11 +25,8 @@ You can change values:
 JWT_SECRET=1234567890
 PORT=3000
 
-# without Docker
 API_HOST=http://localhost:5000/api
 
-# with Docker
-#API_HOST=http://back-end:5000/api
 ```
 
 ### Dockerfile run
@@ -47,11 +44,11 @@ The root folder has the ```.env``` file. You can change the ports values
 DB_PORT=27017
 BACKEND_PORT=5000
 
-# dev mode
-FRONTEND_PORT=3000
+# dev mode outside port
+#FRONTEND_PORT=3000
 
-# prod mode
-#FRONTEND_PORT=80
+# prod mode outside port
+FRONTEND_PORT=80
 ```
 
 ## Development mode

@@ -47,6 +47,7 @@ services:
       - ./../front-end/.env
     environment:
       NODE_ENV: production
+      API_HOST: "http://back-end:${BACKEND_PORT:-5000}/api"
     networks:
       - frontend
 

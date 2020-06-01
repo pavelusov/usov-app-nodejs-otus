@@ -16,7 +16,7 @@ services:
       - frontend
 
   back-end:
-    container_name: courses-back-end
+    container_name: courses-back-end-dev
     restart: "on-failure"
     build:
       context: ./../back-end
@@ -36,7 +36,7 @@ services:
       - frontend
 
   front-end:
-    container_name: courses-front-end
+    container_name: courses-front-end-dev
     restart: "on-failure"
     build:
       context: ./../front-end
@@ -49,6 +49,7 @@ services:
       - ./../front-end/.env
     environment:
       NODE_ENV: development
+      API_HOST: "http://back-end:${BACKEND_PORT:-5000}/api"
     networks:
       - frontend
 
