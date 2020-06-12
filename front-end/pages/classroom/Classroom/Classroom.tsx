@@ -63,7 +63,7 @@ const ClassRoom = ({ title, description, date, links }: IClassRoom) => {
     };
     setContent(value);
   };
-
+  const isLinksArray= Array.isArray(links);
   return (
     <Container>
       <div className={s.header}>
@@ -71,11 +71,11 @@ const ClassRoom = ({ title, description, date, links }: IClassRoom) => {
         <div className={s.date}>{date}</div>
       </div>
       <div className={s.description}>{description}</div>
-      {links.length !== 0 && (
+      {isLinksArray && links?.length !== 0 && (
         <Row>
           <Col xs="12" md="4">
             <ListGroup>
-              {links.map(({ id, title, link, type }) => (
+              {isLinksArray && links.map(({ id, title, link, type }) => (
                 <ListGroupItem
                   key={id}
                   onClick={onClick({ id, title, link, type })}

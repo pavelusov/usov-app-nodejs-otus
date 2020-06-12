@@ -5,9 +5,16 @@
   padding: 20px 0;
 }
 
+.navWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .link {
   color: #fff;
   padding: 0 15px;
+  cursor: pointer;
+  display: inline-block;
 
   &:first-of-type {
     padding-left: 0;

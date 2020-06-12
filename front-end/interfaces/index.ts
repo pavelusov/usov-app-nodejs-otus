@@ -34,3 +34,10 @@ export interface ILink {
   title: string;
   link: string;
 }
+
+export interface ResponseError {
+  location: string;
+  msg: string;
+  param: string;
+  value: string;
+}
